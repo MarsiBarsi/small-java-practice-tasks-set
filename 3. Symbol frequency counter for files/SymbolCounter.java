@@ -1,6 +1,4 @@
-package savedPrevious;/*
-    Ввод имени файла -> проверка на существование -> считать поток -> посчитать кол-во символов -> вывести частоту в другой файл
- */
+package savedPrevious;
 
 import java.util.Map;
 import java.util.TreeMap;
