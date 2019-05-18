@@ -1,9 +1,8 @@
-package savedPrevious;// сложение, вычитание, перемножаться
-// javaDoc
+package savedPrevious;
 import savedPrevious.interfaces.BasicMathElement;
 
 /**
- * Класс представляющий собой реализацию математического комплексного числа
+ * Math complex number
  * @autor Roman Sedov
  */
 public class ComplexNumber implements BasicMathElement<ComplexNumber> {
@@ -17,44 +16,28 @@ public class ComplexNumber implements BasicMathElement<ComplexNumber> {
     public ComplexNumber(double real) {
         this(real, 0);
     }
-
-    /**
-     * Конструктор - создание нового объекта
-     * @param real - реальная часть числа
-     * @param imaginary - мнимая часть числа
-     */
+    
     ComplexNumber(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
 
-    /**
-     * Получение реальной части числа
-     * @return реальная часть числа
-     */
     public double getReal() {
         return real;
     }
 
-    /**
-     * Получение мниной части числа
-     * @return мнимая часть числа
-     */
     public double getImaginary() {
         return imaginary;
     }
 
-    /**
-     * Выводит элемент в консоль
-     */
     public void print() {
         System.out.println(getReal() + " + " + getImaginary() + "i");
     }
 
     /**
-     * Сложение комплексного числа
-     * @param complexToAdd - число к добавлению
-     * @return новое комплексное число, полученное сложением с переданным
+     * add complex number
+     * @param complexToAdd
+     * @return new complex number 
      */
     public ComplexNumber add(ComplexNumber complexToAdd) {
         double calculatedReal = getReal() + complexToAdd.getReal();
@@ -64,9 +47,9 @@ public class ComplexNumber implements BasicMathElement<ComplexNumber> {
     }
 
     /**
-     * Вычитание комплексного числа
-     * @param complexToSubstract - число для вычитания
-     * @return новое комплексное число, полученное вычитанием переданного
+     * substract complex number
+     * @param complexToSubstract
+     * @return new complex number 
      */
     public ComplexNumber substract(ComplexNumber complexToSubstract) {
         double calculatedReal = getReal() - complexToSubstract.getReal();
@@ -76,9 +59,9 @@ public class ComplexNumber implements BasicMathElement<ComplexNumber> {
     }
 
     /**
-     * Умножение комплексного числа
-     * @param complexToMultiply - число для умножения
-     * @return новое комплексное число, полученное умножением на переданное
+     * multiply complex number
+     * @param complexToMultiply
+     * @return new complex number 
      */
     public ComplexNumber multiply(ComplexNumber complexToMultiply) {
         double calculatedReal = getReal() * complexToMultiply.getReal()
@@ -90,9 +73,9 @@ public class ComplexNumber implements BasicMathElement<ComplexNumber> {
     }
 
     /**
-     * Деление комплексного числа
-     * @param complexToDivide - число для деления
-     * @return новое комплексное число, полученное делением на переданное
+     * divide complex number
+     * @param complexToDivide
+     * @return new complex number 
      * @throws
      */
     public ComplexNumber divide(ComplexNumber complexToDivide) throws IllegalArgumentException {
